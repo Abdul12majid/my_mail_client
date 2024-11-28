@@ -25,10 +25,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body>
+        <div className="flex h-screen">
+          {/* Sidebar */}
+          <aside className="w-64 bg-gray-800 text-white flex flex-col">
+            <div className="p-4 text-2xl font-bold">Mail Client</div>
+            <nav>
+              <ul>
+                <li className="p-4 hover:bg-gray-700">
+                  <a href="/inbox">Inbox</a>
+                </li>
+                <li className="p-4 hover:bg-gray-700">
+                  <a href="/sent">Sent</a>
+                </li>
+                <li className="p-4 hover:bg-gray-700">
+                  <a href="/drafts">Drafts</a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+          {/* Main Content */}
+          <main className="flex-1 bg-gray-100 p-6">{children}</main>
+        </div>
       </body>
     </html>
   );
