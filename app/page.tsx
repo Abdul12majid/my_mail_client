@@ -13,9 +13,6 @@ const Home = () => {
         <Link href="/inbox">
           <button className="btn btn-primary">Go to Inbox</button>
         </Link>
-        <Link href="/compose">
-          <button className="btn btn-secondary">Compose Email</button>
-        </Link>
       </div>
     </main>
   );
